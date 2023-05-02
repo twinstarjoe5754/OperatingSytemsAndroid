@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="1dp"
-    android:padding="2dp"
-    app:elevation="16dp"
-    app:cardCornerRadius="16dp"
-    app:cardBackgroundColor="#fff"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    >
+    android:layout_margin="1dp"
+    android:padding="0dp"
+    app:cardBackgroundColor="#ffBBBBBB"
+    app:cardCornerRadius="16dp"
+    app:cardUseCompatPadding="true"
+    app:elevation="64dp">
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-<ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="100dp"
-    android:id="@+id/imageView"
-    android:layout_centerHorizontal="true"
-    android:scaleType="fitXY"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvName"
-        android:text="Name"
-        android:textColor="@color/cardview_dark_background"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/imageView"
-        />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imageView"
+            android:layout_centerHorizontal="true"
+            android:text="Name"
+            android:textColor="@color/cardview_dark_background" />
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

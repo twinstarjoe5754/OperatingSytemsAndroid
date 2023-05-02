@@ -29,19 +29,23 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCEDygwvU9f73flOYv_6DdreK7UXQsHNt8" />
-
-        <activity
-            android:name=".MapsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_maps" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".MapsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_maps">
+            <intent-filter>
+            <action android:name="android.intent.action.EDIT" />
+            <category android:name="android.intent.category.INFO" />
+        </intent-filter>
         </activity>
     </application>
 

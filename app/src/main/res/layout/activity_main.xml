@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ff88ffff"
     android:orientation="vertical"
     tools:context=".MainActivity"
     tools:ignore="MissingClass">
-<!--&lt;!&ndash;-->
 
-<!--    <ScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
-<!--&ndash;&gt;-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <GridView
+            android:id="@+id/gridview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
-                <GridView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:numColumns="3"
-                    android:horizontalSpacing="4dp"
-                    android:verticalSpacing="4dp"
-                    android:id="@+id/gridview"
-                     />
-        </LinearLayout>
-<!--     </ScrollView>-->
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#ff888888"
+            android:horizontalSpacing="8dp"
+            android:numColumns="3"
+            android:verticalSpacing="16dp" />
+    </LinearLayout>
 </LinearLayout>
