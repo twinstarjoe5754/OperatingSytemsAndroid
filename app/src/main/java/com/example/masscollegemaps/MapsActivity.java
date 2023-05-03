@@ -20,23 +20,18 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
     MediaPlayer mediaPlayer;
-
     private GoogleMap mMap;
     private FrameLayout map;
-
     String selectedName;
     int selectedImage;
     int selectedAnthem;
     double selectedLong;
     double selectedLat;
-
     ToggleButton zoomer;
     ToggleButton pauseResume;
     SeekBar seekBar;
-
     Boolean bPlaying = false;
     Boolean bZoomed = true;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +50,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             selectedLat = intent.getDoubleExtra("latitude", 0);
 
         }
-
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -64,10 +58,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void initTools() {
         pauseResume = findViewById(R.id.pauseresume);
         pauseResume.setOnClickListener(v -> {
-            if (bPlaying)
-                setPlay();
-            else
-                setPause();
+            if (bPlaying) setPlay();
+            else          setPause();
         });
         zoomer = findViewById(R.id.zoomer);
         LatLng location = new LatLng(selectedLat, selectedLong);
@@ -75,11 +67,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             int zoomLevel;
             if (bZoomed) {
                 moveCamera(10);
-                if (seekBar != null)
-                    seekBar.setProgress(10);
+                if (seekBar != null) seekBar.setProgress(10);
             }
-            else {
-                    moveCamera(2);
+            else {  moveCamera(2);
                     if (seekBar != null)
                         seekBar.setProgress(2);
                 }
